@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+html, body { background: #ffffff; color: #0d1f15; }
+
+* { -webkit-font-smoothing: antialiased; }
+
+.noise {
+  background-image: radial-gradient(rgba(13,31,21,0.06) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+
+.shimmer {
+  background: linear-gradient(110deg, #f1f8f3 8%, #dcecdf 18%, #f1f8f3 33%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.leaf-rotate { animation: leafSpin 1.6s cubic-bezier(.4,0,.2,1) infinite; }
+@keyframes leafSpin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(.85); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+.reveal-mask {
+  -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent);
+          mask-image: linear-gradient(to bottom, #000 60%, transparent);
+}
