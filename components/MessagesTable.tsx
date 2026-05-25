@@ -79,10 +79,10 @@ export default function MessagesTable({ initial }: { initial: Msg[] }) {
   );
 }
 
-function Th({ children }: { children: React.ReactNode }) {
+function Th({ children }: { children?: React.ReactNode }) {
   return <th className="px-4 py-3 text-[10px] tracking-[0.2em] uppercase font-medium">{children}</th>;
 }
-function Td({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+function Td({ children, className = "" }: { children?: React.ReactNode; className?: string }) {
   return <td className={`px-4 py-3 align-top text-forest-800 ${className}`}>{children}</td>;
 }
 function Row({ label, value }: { label: string; value: string }) {
